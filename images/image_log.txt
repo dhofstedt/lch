@@ -1,0 +1,32 @@
+Image Name,Description 
+image1.png,AP radiograph of the left femur showing a well circumscribed lucent lesion in the femoral diaphysis with a narrow zone of transition, no matrix, and surrounding periosteal reaction. no definite soft tissue involvement 
+image1.png,exit 
+image2.png,Lateral radiograph of the left femur demonstrating the same findings as image1 
+image3.png,Frog leg lateral radiograph of the left femur showin gthe same findings. 
+image5.png,Coronal T1 MRI of the left femur 
+image6.png,Coronal STIR of the left femur 
+image7.png,axial T1 MRI of the left femur 
+image8.png,coronal post-gad T1fs of the left femur 
+image9.png,axial post-gad T1fs 
+image10.png,ct guided biopsy image 
+image11.png,coronal fused pet ct 
+image12.png,axial pet ct follow up after treatment 
+goyal-paper-lch-diagram.jpg,diagram of langerhans cell histiocytosis in adults from the Goyal mayo clinic paper 
+goyal-paper-lch-dx-flowcart.jpg,flowchart from the goyal mayo clinic paper on the workup of suspected histiocytic neoplasm 
+companion-case-1.png,companion case of a young child with a similar appearing lesion in the left femoral shaft and confirmed diagnosis of LCH 
+zaveri-lch-findings-table.png,table describing the findings of LCH by system 
+zaveri-skull-punched-out-lesion.png,skull radiograph showing a punched out skull lesion of lch on radiograph 
+zaveri-t1-skull-mri.png,LCH in an adult patient t1 weighted mr showing calvarial lesions with inner and outer cortex destruction 
+zaveri-geographic-skull.png,skull radiograph of the skull in a 2 year old female patient showing the geographic skull appearance also note the lack of periosteal reaction which is a feature of lch skull lesions not shared with lesions elsewhere in the body such as the femur in our case and companion case 
+zaveri-pelvis-lesion.png,ap radiograph of a 2 year old patient showing a large lytic lesion in the pelvis 
+zaveri-bone-scan.png,whole body scintigraphy in a 2 year old patient same as the skull and pelvis radiographs whowing photopenic areas correlating with the lucent skeletal lesions 
+zaveri-axial-ct-vertebra.png,axial ct of a vertebral body showing an irregular lytic lesion in a thoracic vertebral body 
+zaveri-coronal-ct-spine.png,cornal ct through ths pine showin classic collapse of a thoracic vertebral ody referred to as vertebra plana a classic board question 
+zaveri-elbow-radiograph.png,ap radiograph of the elbow in a 9 year old boy showing a more cortically destructive lch lesion with aggressive periosteal reaction 
+zaveri-axial-ct-elbow.png,axial ct of the same elbow whows the lytic and expansile lesion with the arrow indicating cortical destruction 
+zaveri-ct-liver.png,axial contrast enhance ct through the liver showing hepatomegaly and multiple solid low density lesions 
+zaveri-mesenteric-lymphadenopathy-ct.png,axial contrast enhanced ct of the abdomen showing mesenteric lymphadenopathy 
+zaveri-pituitary-mr.png,sagittal t1 mr of the pituitary showing thickening of the pituitary stalk and loss of the posterior pituitary bright spot 
+zaveri-axial-t2-mr-cerebellum.png,axial t2 mr of the cerebellum showing a t2 yperintense lesion in the cerebellum 
+zaveri-coronal-ct-lung-involvement.png,coronal ct of the chest showing centrilobular nodules with a predominantly upper lobe distribution lacking cysts suggesting earl onset disease 
+zaveri-advanced-pulmonary-involvement.png,coronal ct of the chest showing numerous upper lobe predominant cysts of varying sizes note the sparing of the costophrenic angles in both patients remember that for boards 
