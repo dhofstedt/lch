@@ -97,6 +97,53 @@
             padding: 0;
         }
         
+        /* Caption styles */
+        .small-caption {
+            font-size: 0.75em;
+            margin-bottom: 5px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted #000;
+            cursor: help;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #555;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8em;
+        }
+
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
     </style>
 </head>
 <body>
@@ -114,9 +161,9 @@
             <section>
                 <h2>Case Presentation</h2>
                 <ul>
-                    <li>11-year-old female with persistent left thigh pain for several months in 2023</li>
-                    <li>Initially diagnosed as "growing pains" but developed limping by November 2023</li>
-                    <li>Medical history: IgA deficiency, eczema, ADHD, anxiety</li>
+                    <li class="fragment">11-year-old female (initially 9 years old) with persistent left thigh pain for several months in 2023</li>
+                    <li class="fragment">Initially diagnosed as "growing pains" but developed limping by November 2023</li>
+                    <li class="fragment">Medical history: IgA deficiency, eczema, ADHD, anxiety</li>
                 </ul>
             </section>
 
@@ -128,8 +175,8 @@
                     <img src="images/image2.png" alt="Lateral radiograph illustrating a narrow zone of transition with surrounding periosteal reaction in the left femur" data-description="Lateral radiograph of left femur">
                 </div>
                 <ul>
-                    <li>Well-circumscribed lucent lesion in the femoral diaphysis</li>
-                    <li>Narrow zone of transition with surrounding periosteal reaction</li>
+                    <li class="fragment">Well-circumscribed lucent lesion in the femoral diaphysis</li>
+                    <li class="fragment">Narrow zone of transition with surrounding periosteal reaction</li>
                 </ul>
             </section>
 
@@ -142,9 +189,9 @@
                     <img src="images/image8.png" alt="Post-contrast MRI demonstrating periosteal new bone formation with mild expansion" data-description="Post-contrast MRI">
                 </div>
                 <ul>
-                    <li>Heterogeneous lesion involving mid to distal left femoral diaphysis</li>
-                    <li>Extensive reactive changes in surrounding medullary canal</li>
-                    <li>Periosteal new bone formation with mild expansion</li>
+                    <li class="fragment">Heterogeneous lesion involving mid to distal left femoral diaphysis</li>
+                    <li class="fragment">Extensive reactive changes in surrounding medullary canal</li>
+                    <li class="fragment">Periosteal new bone formation with mild expansion</li>
                 </ul>
             </section>
 
@@ -155,9 +202,9 @@
                     <img src="images/image10.png" alt="CT-guided biopsy image showing the procedure performed in December 2023 for Langerhans cell histiocytosis" data-description="CT-guided biopsy">
                 </div>
                 <ul>
-                    <li>CT-guided biopsy performed December 2023</li>
-                    <li>Pathology: Positive for Langerhans cell histiocytosis</li>
-                    <li>IHC: Positive for CD1a, langerin, and S100; BRAF negative</li>
+                    <li class="fragment">CT-guided biopsy performed December 2023</li>
+                    <li class="fragment">Pathology: Positive for Langerhans cell histiocytosis</li>
+                    <li class="fragment">IHC: Positive for CD1a, langerin, and S100; BRAF negative</li>
                 </ul>
             </section>
 
@@ -165,33 +212,44 @@
             <section class="smaller-text compact-slide">
                 <h2>Follow-up PET/CT</h2>
                 <div class="image-row">
+                    <figcaption class="small-caption">Initial PET/CT (February 2024)</figcaption>
                     <img src="images/image11.png" alt="Initial PET/CT scan from February 2024 showing SUVmax of 3.3 in the left femoral lesion" data-description="Initial PET/CT">
+                    <figcaption class="small-caption">Follow-up PET/CT (May 2024)</figcaption>
                     <img src="images/image12.png" alt="Follow-up PET/CT scan from May 2024 showing decreased uptake (SUVmax 1.7) in the left femoral lesion" data-description="Follow-up PET/CT">
                 </div>
                 <ul>
-                    <li>Initial PET (2/2024): SUVmax 3.3 in left femoral lesion</li>
-                    <li>Follow-up PET (5/2024): Decreased uptake (SUVmax 1.7) and extent</li>
-                    <li>Most recent PET (12/2024): No evidence of residual/recurrent disease</li>
+                    <li class="fragment">Initial PET (2/2024): SUVmax 3.3 in left femoral lesion</li>
+                    <li class="fragment">Follow-up PET (5/2024): Decreased uptake (SUVmax 1.7) and extent</li>
+                    <li class="fragment">Most recent PET (12/2024): No evidence of residual/recurrent disease</li>
                 </ul>
             </section>
 
             <!-- Slide 7: What is Langerhans Cell Histiocytosis? -->
-            <section>
+            <section class="smaller-text compact-slide">
                 <h2>What is Langerhans Cell Histiocytosis?</h2>
-                <ul>
-                    <li>Proliferation of dendritic cells resembling Langerhans cells</li>
-                    <li>Characterized by CD1a, S100, and CD207 (langerin) expression</li>
-                    <li>Birbeck granules on electron microscopy (racquet-shaped organelles)</li>
-                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="width: 60%;">
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">Neoplastic proliferation of myeloid dendritic cells with Langerhans cell features</li>
+                            <li class="fragment" data-fragment-index="2">Characterized by CD1a, S100, and CD207 (langerin) expression</li>
+                            <li class="fragment" data-fragment-index="3">Birbeck granules on electron microscopy (pathognomonic organelles)</li>
+                            <li class="fragment" data-fragment-index="4">Not derived from normal skin Langerhans cells despite similar appearance</li>
+                        </ul>
+                    </div>
+                    <div style="width: 35%;" class="fragment" data-fragment-index="3">
+                        <img src="images/birbeck-granules.jpg" alt="Birbeck granules" style="max-height: 250px;">
+                        <p class="attribution">Electron microscopy showing Birbeck granules</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Slide 8: Classification of LCH -->
             <section>
                 <h2>Classification of LCH</h2>
                 <ul>
-                    <li>Unifocal (localized): Single bone/few bones (~70% of cases)</li>
-                    <li>Multifocal unisystem: Multiple bones and/or other single system (~20%)</li>
-                    <li>Multifocal multisystem: Disseminated involvement of multiple systems (~10%)</li>
+                    <li class="fragment">Unifocal (localized): Single bone/few bones (~70% of cases)</li>
+                    <li class="fragment">Multifocal unisystem: Multiple bones and/or other single system (~20%)</li>
+                    <li class="fragment">Multifocal multisystem: Disseminated involvement of multiple systems (~10%)</li>
                 </ul>
             </section>
 
@@ -199,13 +257,13 @@
             <section>
                 <h2>Epidemiology and Clinical Presentation</h2>
                 <ul>
-                    <li>Most common in children 1-3 years; can occur at any age</li>
-                    <li>Male predominance (M:F = 2:1)</li>
-                    <li>Presentation varies by site of involvement:
+                    <li class="fragment">Most common in children 1-3 years; can occur at any age</li>
+                    <li class="fragment">Male predominance (M:F = 2:1)</li>
+                    <li class="fragment">Presentation varies by site of involvement:
                         <ul>
-                            <li>Bone pain and swelling (most common)</li>
-                            <li>Skin rash</li>
-                            <li>Diabetes insipidus (pituitary involvement)</li>
+                            <li class="fragment">Bone pain and swelling (most common)</li>
+                            <li class="fragment">Skin rash</li>
+                            <li class="fragment">Diabetes insipidus (pituitary involvement)</li>
                         </ul>
                     </li>
                 </ul>
@@ -216,15 +274,15 @@
                 <h2>Musculoskeletal Manifestations</h2>
                 <h3>Skeletal Distribution</h3>
                 <ul>
-                    <li>Occurs in ~80% of LCH patients</li>
-                    <li>Common sites:
+                    <li class="fragment">Occurs in ~80% of LCH patients</li>
+                    <li class="fragment">Common sites:
                         <ul>
-                            <li>Skull (most common)</li>
-                            <li>Long bones (femur, humerus, tibia)</li>
-                            <li>Pelvis</li>
-                            <li>Spine</li>
-                            <li>Ribs</li>
-                            <li>Mandible</li>
+                            <li class="fragment">Skull (most common)</li>
+                            <li class="fragment">Long bones (femur, humerus, tibia)</li>
+                            <li class="fragment">Pelvis</li>
+                            <li class="fragment">Spine</li>
+                            <li class="fragment">Ribs</li>
+                            <li class="fragment">Mandible</li>
                         </ul>
                     </li>
                 </ul>
@@ -239,9 +297,9 @@
                 </div>
                 <p class="attribution">Zaveri J, et al. Radiographics 2014</p>
                 <ul>
-                    <li>"Punched-out" lytic lesions with beveled edges</li>
-                    <li>Geographic skull appearance when lesions coalesce</li>
-                    <li>Key teaching point: Lack of periosteal reaction in calvarial lesions</li>
+                    <li class="fragment">"Punched-out" lytic lesions with beveled edges</li>
+                    <li class="fragment">Geographic skull appearance when lesions coalesce</li>
+                    <li class="fragment">Key teaching point: Lack of periosteal reaction in calvarial lesions</li>
                 </ul>
             </section>
 
@@ -253,10 +311,10 @@
                     <img src="images/companion-case-1.png" alt="Companion case" data-description="Companion case">
                 </div>
                 <ul>
-                    <li>Diaphyseal or metaphyseal predilection</li>
-                    <li>Early: Lytic, expansile, aggressive appearance</li>
-                    <li>Later: Sclerotic margin develops (chronic lesions)</li>
-                    <li>Unlike skull lesions, periosteal reaction is common</li>
+                    <li class="fragment">Diaphyseal or metaphyseal predilection</li>
+                    <li class="fragment">Early: Lytic, expansile, aggressive appearance</li>
+                    <li class="fragment">Later: Sclerotic margin develops (chronic lesions)</li>
+                    <li class="fragment">Unlike skull lesions, periosteal reaction is common</li>
                 </ul>
             </section>
 
@@ -268,24 +326,52 @@
                 </div>
                 <p class="attribution">Zaveri J, et al. Radiographics 2014</p>
                 <ul>
-                    <li>Classic finding: Vertebra plana</li>
-                    <li>Symmetric, uniform collapse of vertebral body</li>
-                    <li>Preserved intervertebral disk spaces</li>
+                    <li class="fragment">Classic finding: Vertebra plana</li>
+                    <li class="fragment">Symmetric, uniform collapse of vertebral body</li>
+                    <li class="fragment">Preserved intervertebral disk spaces</li>
                 </ul>
             </section>
 
-            <!-- Slide 14: Differential Diagnosis - Solitary Bone Lesions -->
+            <!-- Slide 14: Differential Diagnosis -->
             <section>
                 <h2>Differential Diagnosis</h2>
-                <h3>Solitary Bone Lesions</h3>
-                <ul>
-                    <li>Langerhans Cell Histiocytosis</li>
-                    <li>Osteomyelitis/Brodie's abscess</li>
-                    <li>Eosinophilic granuloma (subset of LCH)</li>
-                    <li>Fibrous dysplasia</li>
-                    <li>Simple bone cyst</li>
-                    <li>Aneurysmal bone cyst</li>
-                </ul>
+                <h3 style="font-size: 0.6em;">Diaphyseal and Metaphyseal Lytic Lesions in Children</h3>
+                <table style="font-size: 0.5em; width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%; text-align: left; border-bottom: 1px solid #555; padding: 5px;">Diagnosis</th>
+                            <th style="width: 55%; text-align: left; border-bottom: 1px solid #555; padding: 5px;">Key Board Exam Differentiators</th>
+                            <th style="width: 20%; text-align: center; border-bottom: 1px solid #555; padding: 5px;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fragment">
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Langerhans Cell Histiocytosis</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Well-defined lytic lesion, narrow zone of transition, mild periosteal reaction, possible soft tissue component</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333; text-align: center;"><img src="images/companion-case-1.png" style="max-height: 80px; max-width: 100%;" alt="LCH example"></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Osteomyelitis/Brodie's abscess</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">"Penumbra sign" on MRI, sequestrum, cloaca, involucrum</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333; text-align: center;"><img src="images/osteomyelitis.jpg" style="max-height: 80px; max-width: 100%;" alt="Osteomyelitis example"><p class="attribution tooltip">Zairi M<span class="tooltip-text">Zairi M, Boussetta R, Msakni A, Mohseni AA, Nessib MN. Subacute osteomyelitis of the tibial diaphysis associated with Brodie's abscess: A rare case report of a four-year-old child. Int J Surg Case Rep. 2021 Dec;89:106453. doi: 10.1016/j.ijscr.2021.106453. Epub 2021 Sep 28. PMID: 34775323; PMCID: PMC8593451.</span></p></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Ewing sarcoma</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">More aggressive appearing, permeative destruction, larger soft tissue mass, "onion-skin" periostitis</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333; text-align: center;"><img src="images/ewing.png" style="max-height: 80px; max-width: 100%;" alt="Ewing sarcoma example"></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Non-ossifying fibroma</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Eccentric, cortically-based, thin sclerotic margins, scalloped borders, no periosteal reaction</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333; text-align: center;"><img src="images/nof.png" style="max-height: 80px; max-width: 100%;" alt="NOF example"></td>
+                        </tr>
+                        <tr class="fragment">
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Bone cysts (SBC/ABC)</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333;">Expansile with thin cortex, "fallen fragment sign" (SBC with pathologic fracture), "fluid-fluid levels" (ABC)</td>
+                            <td style="padding: 5px; border-bottom: 1px solid #333; text-align: center;"><img src="images/bone-cyst.png" style="max-height: 80px; max-width: 100%;" alt="Bone cyst example"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <!-- Slide 15: Extraskeletal Manifestations - Brief Overview -->
@@ -293,11 +379,11 @@
                 <h2>Extraskeletal Manifestations</h2>
                 <h3>Brief Overview</h3>
                 <ul>
-                    <li>CNS: Pituitary stalk thickening → diabetes insipidus</li>
-                    <li>Pulmonary: Nodules → cysts (predominantly upper lobes)</li>
-                    <li>Skin: Seborrheic-like rash, xanthomatous lesions</li>
-                    <li>Liver/spleen: Organomegaly, sclerosing cholangitis</li>
-                    <li>Lymph nodes: Cervical lymphadenopathy</li>
+                    <li class="fragment">CNS: Pituitary stalk thickening → diabetes insipidus</li>
+                    <li class="fragment">Pulmonary: Nodules → cysts (predominantly upper lobes)</li>
+                    <li class="fragment">Skin: Seborrheic-like rash, xanthomatous lesions</li>
+                    <li class="fragment">Liver/spleen: Organomegaly, sclerosing cholangitis</li>
+                    <li class="fragment">Lymph nodes: Cervical lymphadenopathy, Mesenteric lymphadenopathy</li>
                 </ul>
             </section>
 
@@ -305,9 +391,9 @@
             <section>
                 <h2>Pathologic Features</h2>
                 <ul>
-                    <li>Proliferation of Langerhans cells with grooved/folded nuclei</li>
-                    <li>Admixed eosinophils, lymphocytes, neutrophils</li>
-                    <li>Diagnostic markers:
+                    <li class="fragment">Proliferation of Langerhans cells with grooved/folded nuclei</li>
+                    <li class="fragment">Admixed eosinophils, lymphocytes, neutrophils</li>
+                    <li class="fragment">Diagnostic markers:
                         <ul>
                             <li>CD1a+</li>
                             <li>Langerin (CD207)+</li>
@@ -322,10 +408,10 @@
             <section>
                 <h2>Treatment and Prognosis</h2>
                 <ul>
-                    <li>Unifocal disease: Often observation alone or local therapy</li>
-                    <li>Multifocal/multisystem: Systemic chemotherapy ± steroids</li>
-                    <li>Our patient: Good response with resolution of metabolic activity</li>
-                    <li>Prognosis:
+                    <li class="fragment">Unifocal disease: Often observation alone or local therapy</li>
+                    <li class="fragment">Multifocal/multisystem: Systemic chemotherapy ± steroids</li>
+                    <li class="fragment">Our patient: Good response with resolution of metabolic activity</li>
+                    <li class="fragment">Prognosis:
                         <ul>
                             <li>Excellent for unifocal osseous disease (>90% survival)</li>
                             <li>Guarded for multisystem disease with risk organ involvement</li>
@@ -338,10 +424,10 @@
             <section>
                 <h2>Key Teaching Points</h2>
                 <ul>
-                    <li>"Punched-out" skull lesions with beveled edges are pathognomonic</li>
-                    <li>Vertebra plana = think LCH in children</li>
-                    <li>Periosteal reaction present in long bone lesions, absent in skull</li>
-                    <li>Classic triad: Lytic bone lesions + exophthalmos + diabetes insipidus</li>
+                    <li class="fragment">"Punched-out" skull lesions with beveled edges are pathognomonic</li>
+                    <li class="fragment">Vertebra plana = think LCH in children</li>
+                    <li class="fragment">Periosteal reaction present in long bone lesions, absent in skull</li>
+                    <li class="fragment">Classic triad: Lytic bone lesions + exophthalmos + diabetes insipidus</li>
                 </ul>
             </section>
 
@@ -351,7 +437,11 @@
                 <div style="text-align: center;">
                     <img src="images/goyal-paper-lch-dx-flowcart.jpg" alt="Diagnostic flowchart" data-description="Diagnostic flowchart">
                 </div>
-                <p class="attribution">Goyal G, et al. Mayo Clin Proc 2019</p>
+                <p class="attribution">
+                    <span class="tooltip">Goyal G, et al. Mayo Clin Proc 2019
+                      <span class="tooltip-text">Goyal G, Young JR, Koster MJ, et al. The Mayo Clinic Histiocytosis Working Group Consensus Statement for the Diagnosis and Evaluation of Adult Patients With Histiocytic Neoplasms: Erdheim-Chester Disease, Langerhans Cell Histiocytosis, and Rosai-Dorfman Disease. Mayo Clin Proc. 2019;94(10):2054-2071.</span>
+                    </span>
+                  </p>
                 <ul>
                     <li>Initial evaluation: Whole-body PET-CT, labs, biopsy</li>
                     <li>Role of BRAF V600E testing</li>
@@ -362,10 +452,10 @@
             <section>
                 <h2>Summary</h2>
                 <ul>
-                    <li>Langerhans Cell Histiocytosis has variable clinical manifestations</li>
-                    <li>Classic imaging appearance depends on anatomic location</li>
-                    <li>Unifocal disease has excellent prognosis</li>
-                    <li>Our patient shows complete metabolic response on follow-up</li>
+                    <li class="fragment">Langerhans Cell Histiocytosis has variable clinical manifestations</li>
+                    <li class="fragment">Classic imaging appearance depends on anatomic location</li>
+                    <li class="fragment">Unifocal disease has excellent prognosis</li>
+                    <li class="fragment">Our patient shows complete metabolic response on follow-up</li>
                 </ul>
             </section>
 
@@ -375,6 +465,7 @@
                 <ul>
                     <li style="font-size: 26px;">Goyal G, Young JR, Koster MJ, Tobin WO, Vassallo R, Ryu JH, Davidge-Pitts CJ, Hurtado MD, Ravindran A, Sartori Valinotti JC, Bennani NN, Shah MV, Rech KL, Go RS; Mayo Clinic Histiocytosis Working Group. The Mayo Clinic Histiocytosis Working Group Consensus Statement for the Diagnosis and Evaluation of Adult Patients With Histiocytic Neoplasms: Erdheim-Chester Disease, Langerhans Cell Histiocytosis, and Rosai-Dorfman Disease. Mayo Clin Proc. 2019 Oct;94(10):2054-2071. doi: 10.1016/j.mayocp.2019.02.023. Epub 2019 Aug 28. PMID: 31472931.</li>
                     <li style="font-size: 26px;">Zaveri J, La Q, Yarmish G, Neuman J. More than just Langerhans cell histiocytosis: a radiologic review of histiocytic disorders. Radiographics. 2014 Nov-Dec;34(7):2008-24. doi: 10.1148/rg.347130132. PMID: 25384298.</li>
+                    <li style="font-size: 26px;">Zairi M, Boussetta R, Msakni A, Mohseni AA, Nessib MN. Subacute osteomyelitis of the tibial diaphysis associated with Brodie's abscess: A rare case report of a four-year-old child. Int J Surg Case Rep. 2021 Dec;89:106453. doi: 10.1016/j.ijscr.2021.106453. Epub 2021 Sep 28. PMID: 34775323; PMCID: PMC8593451.</li>
                 </ul>
             </section>
 
